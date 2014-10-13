@@ -44,7 +44,7 @@ void loop()                     // run over and over again
 {
   int delayTime = 100; //the number of milliseconds to delay between LED updates
   for(int i = 0; i < 256; i++){
-   updateLEDsLong(i);
+   updateLEDs(i);
    delay(delayTime); 
   }
 }
