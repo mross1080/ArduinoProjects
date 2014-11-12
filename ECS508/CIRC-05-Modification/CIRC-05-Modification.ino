@@ -42,11 +42,18 @@ void setup()
  */
 void loop()                     // run over and over again
 {
-  int delayTime = 100; //the number of milliseconds to delay between LED updates
-  for(int i = 0; i < 256; i++){
-   updateLEDs(i);
-   delay(delayTime); 
+  int delayTime = 1000; //the number of milliseconds to delay between LED updates
+  for(int i = 0; i < 8; i++){
+   changeLED(i,1);
+   delay(delayTime);
+  changeLED(i,0); 
   }
+   for(int i = 7; i >= 0 ; i--){
+   changeLED(i,1);
+   delay(delayTime); 
+   changeLED(i,0);
+  }
+  
 }
 
 
